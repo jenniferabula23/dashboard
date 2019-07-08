@@ -5,131 +5,909 @@
   	<meta http-equiv="X-UA-Compatible" content="IE=edge">
   	<meta name="viewport" content="width=device-width,initial scale=1">
 	<title>Dashboard</title>
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<!-- Font Awesome -->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+<!-- Bootstrap core CSS -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.3/css/mdb.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+<style>
+	@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+	body {
+		font-family: 'Roboto', sans-serif;
+	}
+	.carousel-item{
+		height:450px;
+
+	}
+	.carousel-image-1{
+		background:url(img/bg.jpg);
+		background-size: cover;
+	}
+	.carousel-image-2{
+		background:url(img/search.jpg);
+		background-size: cover;
+	}
+	.carousel-image-3{
+		background:url(img/best.jpg);
+		background-size: cover;
+	}
+	.poscard{
+	position: relative;
+  	bottom: 25px;
+}
+.{
+	margin:0px;
+	padding:0px;
+	font-family: sans-serif;
+}
+#sidebar{
+	position:hidden;
+	width:250px;
+	height:100%;
+	background: #EEE;
+	box-shadow: 1px 2px 3px rgba(0,0,0,0.5)
+}
+#sidebar ul li{
+	color:rgba(230,230,230,0.9);
+	list-style: none;
+	padding: 20px 15px;
+	border-bottom:1px solid rgba(100,100,100,0.3);
+}
+.wrapper {
+    display: flex;
+    align-items: stretch;
+}
+
+
+
+#sidebar.active {
+    margin-left: -350px;
+}
+#sidebar {
+    min-width: 300px;
+    max-width: 300px;
+    min-height: 100vh;
+}
+.col2{
+	color: red !important;
+	padding-left: 50px;
+	font-family: sans-serif;
+	}
+.col1{
+	padding-left: 50px;
+	font-family: sans-serif;
+}
+.input-group.md-form.form-sm.form-1 input{
+border: 2px solid #bdbdbd;
+border-top-right: 0.25rem;
+border-bottom-right: 0.25rem;
+}
+.hey{
+	padding: 2px 5px !important;
+	
+}
+.card.space {
+	padding: 0 10px !important;
+	width: 100%;
+	height: 300px;
+	justify-content: center;
+	align-items: center;
+}
+
+.card.body {
+	width: 90%;
+	margin: auto;
+}
+
+.top-jobs__card-featured-ribbon {
+    position: relative;
+    display: inline-block;
+    width: 100px;
+    height: 0;
+    left: 10px;
+    margin: 0;
+    z-index: 1;
+    -webkit-transform-origin: center left;
+    transform-origin: center left;
+    -webkit-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+}
+
+.ribbon-text {
+    width: 100px;
+    height: 25px;
+    line-height: 2;
+    text-transform: uppercase;
+    color: #fff;
+    text-align: center;
+    padding-left: 12px;
+    font-size: .75rem;
+    background-color: #ff6200;
+    position: absolute;
+    top: 0;
+    right: 100px;
+    overflow: hidden;
+}
+.hi{
+	margin: 5px 0 0 50px;
+}
+.row-data {
+	margin: 20px 0 50px 10px;
+
+}
+.cal-indicator {
+	background-color: rgb(255, 98, 0) !important;
+}
+.fan{
+	color:rgb(255, 98, 0);
+}
+.cool{
+	margin-bottom: 40px;
+	padding-top: 15px;
+	padding-bottom: 15px;
+}
+
+.core{
+	background-color: #efe; 
+}
+
+}
+@media screen and (max-width: 740px) {
+	.card.body {
+		width: 100%;
+		padding: 10px !important;
+	}
+	.card.space {
+		margin-bottom: 5px !important;
+	}
+	.row-data {
+		margin: 25px 0 0;
+	}
+	.card.rower {
+		margin-bottom: 7px;
+	}
+	
+}
+</style>
+	
 </head>
 <body>
-	<!--Navbar -->
-	<nav class="navbar navbar-expand-lg navbar- bg">
-	  <a class="navbar-brand" href="#">STUDENTS INTERNS</a>
-	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-	    <span class="navbar-toggler-icon"></span>
-	  </button>
-	  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-	    <div class="navbar-nav" style="margin-left: auto;">
-	      <a class="nav-item nav-link active" href="index.html">HOME <span class="sr-only">(current)</span></a>
-	      <a class="nav-item nav-link" href="login.html">LOGIN</a>
-	      <a class="nav-item nav-link" href="signin.html">SIGNUP</a>
-	    </div>
-	  </div>
-	</nav>
-	<!--Background Picture -->
-	<img src="./img/bg.jpg" alt="background picture" class="bgimg parallax">
-	<div class="caption">
-		<span class="text-center">WELCOME TO COMPANY NAME</span>
-	</div>
-
-	<!--Conatainer -->
-	<div class="container poscard">
-		<div class="card" style="padding: 10px; background-color: white; box-shadow: 4px 5px 6px rgba(0,0,0,0.65); margin: auto;">
-			<div class="row">
-				<div class="col-4">
-					<div class="card" style="width: 18rem; margin: auto;">
-						  <img class="card-img-top picture" src="./img/search.jpg" alt="Card image cap">
-						  <div class="card-body">
-						    <h5 class="card-title">Card title</h5>
-						    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-						    <a href="#" class="btn btn-primary">Go somewhere</a>
-						  </div>
-					</div>
-				</div>
-
-				<!--Second Column-->
-				<div class="col-4">
-					<div class="card" style="width: 18rem;">
-						  <img class="card-img-top picture" src="./img/profile.jpg" alt="Card image cap">
-						  <div class="card-body">
-						    <h5 class="card-title">Card title</h5>
-						    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-						    <a href="#" class="btn btn-primary">Go somewhere</a>
-						  </div>
-					</div>
-				</div>
-
-				<!--Third Column-->
-				<div class="col-4">
-					<div class="card" style="width: 18rem;">
-						  <img class="card-img-top picture" src="./img/best.jpg" alt="Card image cap">
-						  <div class="card-body">
-						    <h5 class="card-title">Card title</h5>
-						    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-						    <a href="#" class="btn btn-primary">Go somewhere</a>
-						  </div>
-					</div>
-				</div>
-				<button class="btn btn-danger width">Register</button>
+	<nav class="navbar-expand-lg navbar-dark bg-dark">
+		<div class="container">
+			<button class="navbar-toggler" onclick="openNav()"><span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navNavbar">
+				<ul class="navbar-nav ml-auto">
+					<li class="nav-item active">
+						<a href="login.html" class="nav-link">LOGIN</a>
+					</li>
+					<li class="nav-item">
+						<a href="sign-up.html" class="nav-link">SIGN-UP</a>
+					</li>
+					
+					<li class="nav-item jen" style="background-color: skyblue; ">
+						<a href="post.html" class="nav-link">POST A JOB</a>
+					</li>
+				</ul>
 			</div>
-			
+		</div>
+	</nav>
+
+	<div id="mySidenav" class="sidenav">
+	 	<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+		<div class="Column">
+			<hr>
+		  <div class="input-group md-form form-sm form-1 pl-0">
+			  <div class="input-group-prepend">
+			    <span class="input-group-text skyblue lighten-3" id="basic-text1"><i class="fas fa-search text-white"
+			        aria-hidden="true"></i></span>
+			  </div>
+			  <input class="form-control my-0 py-1" type="text" placeholder="Keyword Search" aria-label="Search">
+			</div>
+		  <div class="col2"><b>FIND A JOB</b></div>
+		  	<br>
+		  <div class="col1"><b>JOB SEEKERS</b></div>
+		 	 <br>
+		  <div class="col1"><b>EMPLOYERS</b></div>
+			<br>
+		  <div class="col1"><b>COURSES</b></div>
+		  	<br>
+		  <div class="col1"><b>CARRER CENTER</b></div>
+		  	<br>
+		  <div class="col1"><b>PROFESSIONAL CV</b></div>
+		  	<br>
+		  <div class="col1"><b>CONTACT US</b></div>
+		  	<br>
+			<hr>
+			<br>
+		<small><div class="col2"><b><a href="login.html" class="nav-link">LOGIN</a></b></div></small>
+		  	<br>
+		<div class="col2"><b>SIGN-UP</b></div>
+		  	<br>
+		  	<hr>
+		<div class="col2"><b>POST A JOB</b></div>
+		  	<br>
 		</div>
 	</div>
+	
+
+
+<!--showcase slider-->
+<section id="showcase">
+	<div id="my carousel-indicators">
+		<div class="carousel-inner">
+			<div class="carousel-item carousel-image-1 active">
+				<div class="wrapper">
+				<!-- Sidebar -->
+		</div>   
+		<!-- End Slidder     -->
+<div class="container">
+	<div class="carousel-caption d-none d-sm-block text-right mb-5">
+		<h3 data-aos="fade-right" data-aos-easing="ease-in-out" class="display-4" style="color:skyblue; text-align: center;">JOB VACANCIES AND CAREERS IN GHANA</h3>
+		<h4 data-aos="fade-right" data-aos-easing="ease-in-out" style="color:skyblue; text-align: center;"><b>Study up today to find job opportunies <br>near you.....</h4>
+		<a href="#" class="btn btn-primary btn-lg">SIGN-UP NOW</a>
+		<div class="row" style="padding-top: 8px;">
+			<div class="col-md-4">
+				<div data-aos="fade-up" class="form-group" style="background-color:skyblue; color:black; text-align:center;">
+					<label for="All job function"><b>ALL JOB FUNCTIONS</b></label>
+				</div>
+			</div>
+			<div class="col-md-4">
+				<div data-aos="fade-right" data-aos-easing="ease-in-out" class="form-group" style="background-color:skyblue;color:black; text-align: center;">
+					<label for="All industries"><b>ALL INDUSTRIES</b></label>
+				</div>
+			</div>
+			<div class="col-md-4">
+				<div data-aos="fade-right" data-aos-easing="ease-in-out" class="form-group" style="background-color:skyblue; color:black;text-align: center;">
+					<label for="All locations"><b>ALL LOCATIONS</b></label>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</section>
+
+
+<div class="container-fluid poscard">
+	<div class="card body" style=" padding: 10px 20px; background-color: white; box-shadow: 1px 2px 3px rgba(0,0,0,0.5); margin: auto;">
+		<center><b><h3 style="font-family: sans-serif; font-size: 1.5rem">HOW.....HELPS YOU</h3></b></center>
+			<center><h5 style="font-family: sans-serif;">.....gives you the tools you need to find the right job and take the next job in your career</h5></center>
+		<div class="row" style="justify-content: space-around;">
+			
+			<div class="col-xs-12 col-md-4">
+				<div data-aos="fade-right" data-aos-easing="ease-in-out"class="card space" style="margin: auto;">
+					<center><i class="fa fa-briefcase fa-5x hey"></i>
+						<h5 style="font-size: 1.4rem;"><center>Search </center></h5>
+						<p style="font-weight: 300; font-size: 16px;">
+							<center>We have in the most popular industries and</center> 
+						<center> with top companies.
+						Plus,you can create alerts so you never miss a job opportunity</center>
+						</p>
+						
+					</center>
+				</div>
+			</div>
+			<div class="col-xs-12 col-md-4">
+				<div data-aos="fade-up" class="card space" style="margin: auto;">
+					<center><i class="fa fa-briefcase fa-5x hey"></i>
+						<h5 style="font-size: 1.4rem;"><center>Create A Profile Get Noticed </center></h5>
+						<p style="font-weight: 300; font-size: 16px;">
+							<center>Create a profile to showcase your skills and candidates</center> 
+						<center>experience so recruiters can find you.Upload your CV so you can apply quickly and easily.</center>
+						</p>
+						
+					</center>
+				</div>
+			</div>
+			<div class="col-xs-12 col-md-4">
+				<div data-aos="fade-left" class="card space" style="margin: auto; padding:5px 5px 5px">
+					<center><i class="fa fa-briefcase fa-5x hey"></i>
+						<h5 style="font-size: 1.4rem;"><center>Be the Best Candidate </center></h5>
+						<p style="font-weight: 300; font-size: 16px;">
+							<center>Find the training you need to improve your skills ,or visit our carrer</center> 
+						<center>Center for tips and advice to build your career.</center>
+						</p>
+						
+					</center>
+					
+				</div>
+			</div>
+			<div  class="col-md-4">
+				<center><button style="background-color: rgb(255, 98, 0);margin-top:10px; ">CREATE YOUR ACCOUNT</button></center>
+			</div>
+		</div>
+		 <h3 style="margin-top: 20px;"> <center>Top Jobs</center></h3>
+	
 
 
 
-	<div style="margin-bottom: 500px;"></div>
-<H2 style="text-align:center;"><B>WHAT OUR CUSTOMERS SAY</B></H2>
-<HR>
+<!--Carousel Wrapper-->
+<div id="multi-item-example" class="carousel slide carousel-multi-item" data-ride="carousel">
 
-<div class="container Jane ">
+		  <!--Controls-->
+		  <center>
+		  	<div class="controls-top">
+		    <a class="btn-floating fan" href="#multi-item-example" data-slide="prev"><i class="fas fa-chevron-left"></i></a>
+		    <a class="btn-floating fan" href="#multi-item-example" data-slide="next"><i
+		        class="fas fa-chevron-right"></i></a>
+		  </div>
+		  </center>
+		  <!--/.Controls-->
+
+		  <!--Indicators-->
+		  <ol class="carousel-indicators hello">
+		    <li class="cal-indicator" data-target="#multi-item-example" data-slide-to="0" class="active"></li>
+		    <li class="cal-indicator" data-target="#multi-item-example" data-slide-to="1"></li>
+		    <li class="cal-indicator" data-target="#multi-item-example" data-slide-to="2"></li>
+		  </ol>
+		  <!--/.Indicators-->
+    <!--Slides-->
+  <div class="carousel-inner" role="listbox">
+
+    <!--First slide-->
+    <div class="carousel-item active">
+
+			<div class="row row-data">
+				<div data-aos="fade-up" class="col-sm-12 col-md-4">
+					<div class="card rower" >
+						<figure class="top-jobs__card-featured-ribbon">
+							<figcaption class="ribbon-text">
+				                FEATURED
+				            </figcaption></figure>
+						<div class="hi">
+							<h6>Medical Doctor</h6>
+							<p>Ona-Ara Hospital<br>Ibadan&Oyo state<br>Full time<br>Medical&Pharmaceutical</p>
+						</div>
+					</div>
+				</div>
+
+				<div data-aos="fade-up" data-aos="fade-up" class="col-sm-12 col-md-4">
+					<div class="card rower" >
+						<figure class="top-jobs__card-featured-ribbon">
+							<figcaption class="ribbon-text">
+				                FEATURED
+				            </figcaption></figure>
+						<div class="hi">
+							<h6>Medical Doctor</h6>
+							<p>Ona-Ara Hospital<br>Ibadan&Oyo state<br>Full time<br>Medical&Pharmaceutical</p>
+						</div>
+					</div>
+				</div>
+
+				<div data-aos="fade-up" class="col-sm-12 col-md-4">
+					<div class="card rower" >
+						<figure class="top-jobs__card-featured-ribbon">
+							<figcaption class="ribbon-text">
+				                FEATURED
+				            </figcaption></figure>
+						<div class="hi">
+							<h6>Medical Doctor</h6>
+							<p>Ona-Ara Hospital<br>Ibadan&Oyo state<br>Full time<br>Medical&Pharmaceutical</p>
+						</div>
+					</div>
+				</div>
+			</div>
+	
+		<div class="row row-data">
+				<div data-aos="fade-up" class="col-sm-12 col-md-4">
+					<div class="card rower" >
+						<figure class="top-jobs__card-featured-ribbon">
+							<figcaption class="ribbon-text">
+				                FEATURED
+				            </figcaption></figure>
+						<div class="hi">
+							<h6>Medical Doctor</h6>
+							<p>Ona-Ara Hospital<br>Ibadan&Oyo state<br>Full time<br>Medical&Pharmaceutical</p>
+						</div>
+					</div>
+				</div>
+
+				<div data-aos="fade-up" data-aos="fade-up" class="col-sm-12 col-md-4">
+					<div class="card rower" >
+						<figure class="top-jobs__card-featured-ribbon">
+							<figcaption class="ribbon-text">
+				                FEATURED
+				            </figcaption></figure>
+						<div class="hi">
+							<h6>Medical Doctor</h6>
+							<p>Ona-Ara Hospital<br>Ibadan&Oyo state<br>Full time<br>Medical&Pharmaceutical</p>
+						</div>
+					</div>
+				</div>
+
+				<div data-aos="fade-up" class="col-sm-12 col-md-4">
+					<div class="card rower" >
+						<figure class="top-jobs__card-featured-ribbon">
+							<figcaption class="ribbon-text">
+				                FEATURED
+				            </figcaption></figure>
+						<div class="hi">
+							<h6>Medical Doctor</h6>
+							<p>Ona-Ara Hospital<br>Ibadan&Oyo state<br>Full time<br>Medical&Pharmaceutical</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	<!--frist slide ends here-->
+
+	<!--second slide-->
+    <div class="carousel-item ">
+
+			<div class="row row-data">
+				<div data-aos="fade-up" class="col-sm-12 col-md-4">
+					<div class="card rower" >
+						<figure class="top-jobs__card-featured-ribbon">
+							<figcaption class="ribbon-text">
+				                FEATURED
+				            </figcaption></figure>
+						<div class="hi">
+							<h6>Medical Doctor</h6>
+							<p>Ona-Ara Hospital<br>Ibadan&Oyo state<br>Full time<br>Medical&Pharmaceutical</p>
+						</div>
+					</div>
+				</div>
+
+				<div data-aos="fade-up" data-aos="fade-up" class="col-sm-12 col-md-4">
+					<div class="card rower" >
+						<figure class="top-jobs__card-featured-ribbon">
+							<figcaption class="ribbon-text">
+				                FEATURED
+				            </figcaption></figure>
+						<div class="hi">
+							<h6>Medical Doctor</h6>
+							<p>Ona-Ara Hospital<br>Ibadan&Oyo state<br>Full time<br>Medical&Pharmaceutical</p>
+						</div>
+					</div>
+				</div>
+
+				<div data-aos="fade-up" class="col-sm-12 col-md-4">
+					<div class="card rower" >
+						<figure class="top-jobs__card-featured-ribbon">
+							<figcaption class="ribbon-text">
+				                FEATURED
+				            </figcaption></figure>
+						<div class="hi">
+							<h6>Medical Doctor</h6>
+							<p>Ona-Ara Hospital<br>Ibadan&Oyo state<br>Full time<br>Medical&Pharmaceutical</p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		<div class="row row-data">
+				<div data-aos="fade-up" class="col-sm-12 col-md-4">
+					<div class="card rower" >
+						<figure class="top-jobs__card-featured-ribbon">
+							<figcaption class="ribbon-text">
+				                FEATURED
+				            </figcaption></figure>
+						<div class="hi">
+							<h6>Medical Doctor</h6>
+							<p>Ona-Ara Hospital<br>Ibadan&Oyo state<br>Full time<br>Medical&Pharmaceutical</p>
+						</div>
+					</div>
+				</div>
+
+				<div data-aos="fade-up" data-aos="fade-up" class="col-sm-12 col-md-4">
+					<div class="card rower" >
+						<figure class="top-jobs__card-featured-ribbon">
+							<figcaption class="ribbon-text">
+				                FEATURED
+				            </figcaption></figure>
+						<div class="hi">
+							<h6>Medical Doctor</h6>
+							<p>Ona-Ara Hospital<br>Ibadan&Oyo state<br>Full time<br>Medical&Pharmaceutical</p>
+						</div>
+					</div>
+				</div>
+
+				<div data-aos="fade-up" class="col-sm-12 col-md-4">
+					<div class="card rower" >
+						<figure class="top-jobs__card-featured-ribbon">
+							<figcaption class="ribbon-text">
+				                FEATURED
+				            </figcaption></figure>
+						<div class="hi">
+							<h6>Medical Doctor</h6>
+							<p>Ona-Ara Hospital<br>Ibadan&Oyo state<br>Full time<br>Medical&Pharmaceutical</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	<!--second slideslide ends here-->
+
+<!--third slide-->
+    <div class="carousel-item ">
+
+			<div class="row row-data">
+				<div data-aos="fade-up" class="col-sm-12 col-md-4">
+					<div class="card rower" >
+						<figure class="top-jobs__card-featured-ribbon">
+							<figcaption class="ribbon-text">
+				                FEATURED
+				            </figcaption></figure>
+						<div class="hi">
+							<h6>Medical Doctor</h6>
+							<p>Ona-Ara Hospital<br>Ibadan&Oyo state<br>Full time<br>Medical&Pharmaceutical</p>
+						</div>
+					</div>
+				</div>
+
+				<div data-aos="fade-up" data-aos="fade-up" class="col-sm-12 col-md-4">
+					<div class="card rower" >
+						<figure class="top-jobs__card-featured-ribbon">
+							<figcaption class="ribbon-text">
+				                FEATURED
+				            </figcaption></figure>
+						<div class="hi">
+							<h6>Medical Doctor</h6>
+							<p>Ona-Ara Hospital<br>Ibadan&Oyo state<br>Full time<br>Medical&Pharmaceutical</p>
+						</div>
+					</div>
+				</div>
+
+				<div data-aos="fade-up" class="col-sm-12 col-md-4">
+					<div class="card rower" >
+						<figure class="top-jobs__card-featured-ribbon">
+							<figcaption class="ribbon-text">
+				                FEATURED
+				            </figcaption></figure>
+						<div class="hi">
+							<h6>Medical Doctor</h6>
+							<p>Ona-Ara Hospital<br>Ibadan&Oyo state<br>Full time<br>Medical&Pharmaceutical</p>
+						</div>
+					</div>
+				</div>
+			</div>
 		
-			<div class="row">
-				<div class="col-3">
-					<div class="card" style="width: 18rem; margin: auto;">
-						  <img class="card-img-top picture" src="./img/search.jpg" alt="Card image cap">
-						  <div class="card-body">
-						    <h5 class="card-title">JENNY PEARLS</h5>
-						    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-						    
-						  </div>
-					</div>
-				</div>
-				
-				
-				<div class="col-3">
-					<div class="card" style="width: 18rem;">
-						  <img class="card-img-top picture" src="./img/profile.jpg" alt="Card image cap">
-						  <div class="card-body">
-						    <h5 class="card-title">WILLIES BEAT</h5>
-						    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-						    
-						  </div>
+		<div class="row row-data">
+				<div data-aos="fade-up" class="col-sm-12 col-md-4">
+					<div class="card rower" >
+						<figure class="top-jobs__card-featured-ribbon">
+							<figcaption class="ribbon-text">
+				                FEATURED
+				            </figcaption></figure>
+						<div class="hi">
+							<h6>Medical Doctor</h6>
+							<p>Ona-Ara Hospital<br>Ibadan&Oyo state<br>Full time<br>Medical&Pharmaceutical</p>
+						</div>
 					</div>
 				</div>
 
-				
-				<div class="col-3">
-					<div class="card" style="width: 18rem;">
-						  <img class="card-img-top picture" src="./img/best.jpg" alt="Card image cap">
-						  <div class="card-body">
-						    <h5 class="card-title">JUSTICE</h5>
-						    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-						    
-						  </div>
+				<div data-aos="fade-up" data-aos="fade-up" class="col-sm-12 col-md-4">
+					<div class="card rower" >
+						<figure class="top-jobs__card-featured-ribbon">
+							<figcaption class="ribbon-text">
+				                FEATURED
+				            </figcaption></figure>
+						<div class="hi">
+							<h6>Medical Doctor</h6>
+							<p>Ona-Ara Hospital<br>Ibadan&Oyo state<br>Full time<br>Medical&Pharmaceutical</p>
+						</div>
 					</div>
 				</div>
 
-				<div class="col-3">
-					<div class="card" style="width: 18rem;">
-						  <img class="card-img-top picture" src="./img/best.jpg" alt="Card image cap">
-						  <div class="card-body">
-						    <h5 class="card-title">SARSO</h5>
-						    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-						    
-						  </div>
+				<div data-aos="fade-up" class="col-sm-12 col-md-4">
+					<div class="card rower" >
+						<figure class="top-jobs__card-featured-ribbon">
+							<figcaption class="ribbon-text">
+				                FEATURED
+				            </figcaption></figure>
+						<div class="hi">
+							<h6>Medical Doctor</h6>
+							<p>Ona-Ara Hospital<br>Ibadan&Oyo state<br>Full time<br>Medical&Pharmaceutical</p>
+						</div>
 					</div>
 				</div>
+			</div>
+		</div>
+	<!--third slide ends here-->
+	</div>
+  <!--/.Slides-->
+
+</div>
+<!--/.Carousel Wrapper-->
 
 
-	<script src="js/jquery-3.3.1.min.js"></script>
-   	<script src="js/bootstrap.js"></script>
+<br>
+	<br>
+	<div data-aos="fade-up" class="card cool">
+		<br>
+		<h4><center>DISCOVER NEW JOBS</center></h4>
+		<br>
+		<br>
+		<center><h5>There are 1441 jobs online right now!</h5></center>
+		<br>
+		<br>
+		<div class="col-md-12 col-sm-3">
+		<center>	<button style="background-color: rgb(255, 98, 0)">BROWSE ALL JOBS</button></center>
+		</div>
+		<br>
+		<br>
+	</div>
+		<br>
+		<br>
+<div data-aos="fade-up" class="core">
+		<h4><center>JOB FUNCTIONS</center></h4>
+		<br>
+		<br>
+		<br>
+		<div class="row">
+		<div class="col-md-3">
+			<ul>
+				<li>Accounting.Auditing&Finance</li>
+				<li>Administrative & Office</li>
+				<li>Agriculture & Farming</li>
+				<li>Building & Architech</li>
+				<li>Community & Social Services</li>
+				<li>Consulting & Strategy</li>
+				<li>Creative & Design</li>
+				<li>Customer Service & Support</li>
+				<li>Employability & Soft Skills</li>
+				<li>Engineering</li>
+			</ul>
+		</div>
+		<div data-aos="fade-up" class="col-md-3">
+			<ul>
+				<li>Accounting.Auditing&Finance</li>
+				<li>Administrative & Office</li>
+				<li>Agriculture & Farming</li>
+				<li>Building & Architech</li>
+				<li>Community & Social Services</li>
+				<li>Consulting & Strategy</li>
+				<li>Creative & Design</li>
+				<li>Customer Service & Support</li>
+				<li>Employability & Soft Skills</li>
+				<li>Engineering</li>
+			</ul>
+		</div>
+		<div data-aos="fade-up" class="col-md-3">
+			<ul>
+				<li>Accounting.Auditing&Finance</li>
+				<li>Administrative & Office</li>
+				<li>Agriculture & Farming</li>
+				<li>Building & Architech</li>
+				<li>Community & Social Services</li>
+				<li>Consulting & Strategy</li>
+				<li>Creative & Design</li>
+				<li>Customer Service & Support</li>
+				<li>Employability & Soft Skills</li>
+				<li>Engineering</li>
+			</ul>
+		</div>
+		<div data-aos="fade-up" class="col-md-3">
+			<ul>
+				<li>Accounting.Auditing&Finance</li>
+				<li>Administrative & Office</li>
+				<li>Agriculture & Farming</li>
+				<li>Building & Architech</li>
+				<li>Community & Social Services</li>
+				<li>Consulting & Strategy</li>
+				<li>Creative & Design</li>
+				<li>Customer Service & Support</li>
+				<li>Employability & Soft Skills</li>
+				<li>Engineering</li>
+			</ul>
+		</div>
+</div>
+</div>
+	<br>
+	<br>
+	<h4 data-aos="fade-up"><center><b>WE'VE PARTNERED WITH TOP GHANA'S TOP EMPLOYERS</b></center></h4>
+	<div data-aos="fade-up" class="card" style="margin-bottom: 50px; margin-top: 50px;">
+		<div class="row">
+			<div class="col-md-6" style="padding-top: 25px; padding-bottom:25px; padding-right: 20px;">
+				<img src="img/logo.png" alt="1">
+				<img src="img/logo.png" alt="1">
+			</div>
+			<div class="col-md-6" style="padding-top: 25px; padding-bottom:25px; padding-left: 5px">
+				<img src="img/logo.png" alt="1">
+				<img src="img/logo.png" alt="1">
+			</div>
+		</div>
+	</div>
+	<h4><b><center>Are you an employer looking for to hire quality candidates in Ghana?</center></b></h4>
+	<br>
+	<br>
+	<div class="col-md-12 col-sm-12">
+		<center><button style="background-color: rgb(255, 98, 0); padding-top: 5px; padding-bottom: 5px; margin-bottom: 100px;">GET STARTED</button></center>
+	</div>
+	<h3 data-aos="fade-up"><b><center>Subscribe to Our Newsletter</center></b></h3>
+	<center data-aos="fade-up">Join our newsletter and keep up to date with the latest</center>
+	<br><center data-aos="fade-up">news and jobs</center>
+<div class="container" >
+	<div  class="col-md-8 col-sm-12">
+       <div class="form-group">
+	          <label for="password">First Name</label>
+	          <input type="name" class="form-control" id="first name" placeholder="" />
+      	</div>
+	      	<div class="form-group">
+	        <label for="first name">Email Address</label>
+	        <input type="email" class="form-control" id="email" placeholder="" />
+      	</div>
+      	<div class="row">
+      	<div class="col-md-4 col-sm-12">
+            <input type="radio" name="JObseeker Newsletter">Jobseeker Newsletter
+            <br>
+        </div>
+        <div class="col-md-4">
+        </div>
+        <div class="col-md-4 col-sm-12">
+             <input type="radio" name="EMployer Newsletter">Employer Newsletter
+          </div>
+        </div>
+          <br>
+          <br>
+          <div class="col-md-12">
+		<center><button style="background-color: rgb(255, 98, 0); padding-top: 5px; padding-bottom: 5px; margin-bottom: 25px;">Subscribe</button></center>
+		</div>
+	</div>
+</div>
+</div>
+</div>
+</div>
+
+
+<footer data-aos="fade-left" style="background-color: black; color: white; padding-left: 30px;">
+	<h4><center>PARTNERS AROUND AFRICA</center></h4>
+<div class="row">
+	<div class="col-md-3 col-sm-12">
+		<ul>
+			<small>
+			<h5>JOBS CLASSIFIEDS</h5>
+			<br>
+			<li>Jobs in Kenya</li>
+			<br>
+			<li>Jobs in Uganda</li>
+			<br>
+			<li>Jobs in Tanzania</li>
+			<br>
+			<li>Jobs in Nigeria</li>
+			<br>
+			<li>Jobs in Ghana</li>
+			<br>
+			</small>
+		</ul>
+	</div>
+	<div class="col-md-3 col-sm-12">
+		<ul>
+			<small>
+			<h5>JOBS CLASSIFIEDS</h5>
+			<br>
+			<li>Jobs in Kenya</li>
+			<br>
+			<li>Jobs in Uganda</li>
+			<br>
+			<li>Jobs in Tanzania</li>
+			<br>
+			<li>Jobs in Nigeria</li>
+			<br>
+			<li>Jobs in Ghana</li>
+			<br>
+			</small>
+		</ul>
+	</div>
+	<div class="col-md-3 col-sm-12">
+		<ul>
+			<Small>
+			<h5>JOBS CLASSIFIEDS</h5>
+			<br>
+			<li>Jobs in Kenya</li>
+			<br>
+			<li>Jobs in Uganda</li>
+			<br>
+			<li>Jobs in Tanzania</li>
+			<br>
+			<li>Jobs in Nigeria</li>
+			<br>
+			<li>Jobs in Ghana</li>
+			<br>
+			</Small>
+		</ul>
+	</div>
+	<div class="col-md-3 col-sm-12">
+		<ul>
+			<small>
+			<h5>JOBS CLASSIFIEDS</h5>
+			<br>
+			<li>Jobs in Kenya</li>
+			<br>
+			<li>Jobs in Uganda</li>
+			<br>
+			<li>Jobs in Tanzania</li>
+			<br>
+			<li>Jobs in Nigeria</li>
+			<br>
+			<li>Jobs in Ghana</li>
+			<br>
+			</small>
+		</ul>
+	</div>
+</div>
+<br>
+<br>
+<small>
+<div class="row">
+	<div class="col">
+		About us
+	</div>
+	<div class="col">
+		Website terms
+	</div>
+	<div class="col">
+		Privacy Policy
+	</div>
+	<div class="col">
+		Companies Hiring
+	</div>
+	<div class="col">
+		Best 100 Companies
+	</div>
+	<div class="col">
+		Latest Research
+	</div>
+	<div class="col">
+		Banner Ad Rates
+	</div>
+	<div class="col">
+		Courses
+	</div>
+	<div class="col">
+		Widgets
+	</div>
+</div>
+<br>
+<br>
+<div class="row">
+<div class="col">
+<i class="fab fa-facebook fa-3x" style="color:blue;"></i>
+</div>
+<div class="col">
+<i class="fab fa-twitter-square fa-3x"style="color:blue;"></i>
+</div>
+<div class="col">
+<i class="fab fa-linkedin-in fa-3x"style="color:blue;"></i>
+</div>
+<div class="col">
+<i class="fab fa-instagram fa-3x"style="color:blue;"></i>
+</div>
+<div class="col">
+<i class="fab fa-google-play fa-3x" style="color:blue;"></i>
+</div>
+<div class="col">
+<h6>@jenjob 2019.All rights reserved</h6>
+</div>
+</div>
+</footer>
+
+
+
+<!-- JQuery -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<!-- Bootstrap tooltips -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+<!-- Bootstrap core JavaScript -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+ <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init({
+    	duration: 1000
+    });
+  </script>
+<script type="text/javascript">
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+}
+</script>
+
 </body>
 </html>
